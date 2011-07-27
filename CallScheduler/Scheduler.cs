@@ -14,16 +14,19 @@ namespace CallScheduler {
         private int MaxShiftsPerLifetime;
         private int MaxSameShifts;
         private int MaxConsecutiveShifts;
+        private int MaxWeekends;
         private bool CrossCallAllowed;
 
         public Scheduler(string rotationFileName, string start, string end, List<Doctor> doctors, 
             int maxPerRotation, int maxPerLifetime, int maxSameShifts, int maxConsecutiveShifts, 
+            int maxWeekends, 
             bool crossCallAllowed)
         {
             MaxShiftsPerRotation = maxPerRotation;
             MaxShiftsPerLifetime = maxPerLifetime;
             MaxSameShifts = maxSameShifts;
             MaxConsecutiveShifts = maxConsecutiveShifts;
+            MaxWeekends = maxWeekends;
             CrossCallAllowed = crossCallAllowed;
 
             Schedule = new List<Slot>();
@@ -145,7 +148,18 @@ namespace CallScheduler {
             {
                 return false;
             }
+            if (DoctorHasExceededMaxWeekendsPerRotation(slot, doctor))
+            {
+                return false;
+            }
             return true;
+        }
+
+        private bool DoctorHasExceededMaxWeekendsPerRotation(Slot slot, Doctor doctor)
+        {
+            if (MaxWeekends == 0)
+                return false;
+            return GetSlotsByDoctorAndRotation(doctor, slot).Count() >= MaxWeekends;
         }
 
         private bool DoctorHasExceededMaxConsecutiveShifts(Slot slot, Doctor doctor)

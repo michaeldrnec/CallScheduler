@@ -47,7 +47,7 @@ namespace CallScheduler {
                 MessageBox.Show("Not all required fields are filled.");
                 return;
             }
-            int MaxPerRotation, MaxPerLifetime, MaxSameShifts, MaxConsecutiveShifts;
+            int MaxPerRotation, MaxPerLifetime, MaxSameShifts, MaxConsecutiveShifts, MaxWeekends;
             if (!int.TryParse(textboxMaxPerRotation.Text, out MaxPerRotation))
             {
                 MaxPerRotation = 0;
@@ -62,12 +62,15 @@ namespace CallScheduler {
             if (!int.TryParse(textboxMaxConsecutive.Text, out MaxConsecutiveShifts)) {
                 MaxConsecutiveShifts = 0;
             }
+            if (!int.TryParse(textboxMaxWeekends.Text, out MaxWeekends)) {
+                MaxWeekends = 0;
+            }
 
             try
             {
                 var doctors = Doctor.GetDoctorsFromFile(textboxDoctorFilename.Text);
                 var schedule = new Scheduler(textboxRotationsFilename.Text, textboxStartDate.Text, textboxEndDate.Text,
-                                             doctors, MaxPerRotation, MaxPerLifetime, MaxSameShifts, MaxConsecutiveShifts, checkboxCrossCall.Checked);
+                                             doctors, MaxPerRotation, MaxPerLifetime, MaxSameShifts, MaxConsecutiveShifts, MaxWeekends, checkboxCrossCall.Checked);
                 schedule.Populate();
                 var output = schedule.OutputSchedule();
                 output.AppendLine();

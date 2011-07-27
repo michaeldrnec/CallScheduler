@@ -48,6 +48,8 @@
             this.textBoxMaxSameShifts = new System.Windows.Forms.TextBox();
             this.textboxMaxConsecutive = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.textboxMaxWeekends = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -151,7 +153,7 @@
             // 
             // textboxMaxPerLifetime
             // 
-            this.textboxMaxPerLifetime.Location = new System.Drawing.Point(440, 94);
+            this.textboxMaxPerLifetime.Location = new System.Drawing.Point(370, 94);
             this.textboxMaxPerLifetime.Name = "textboxMaxPerLifetime";
             this.textboxMaxPerLifetime.Size = new System.Drawing.Size(31, 20);
             this.textboxMaxPerLifetime.TabIndex = 10;
@@ -161,7 +163,8 @@
             // checkboxCrossCall
             // 
             this.checkboxCrossCall.AutoSize = true;
-            this.checkboxCrossCall.Location = new System.Drawing.Point(535, 93);
+            this.checkboxCrossCall.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkboxCrossCall.Location = new System.Drawing.Point(465, 96);
             this.checkboxCrossCall.Name = "checkboxCrossCall";
             this.checkboxCrossCall.Size = new System.Drawing.Size(112, 17);
             this.checkboxCrossCall.TabIndex = 11;
@@ -170,11 +173,11 @@
             // 
             // textboxResults
             // 
-            this.textboxResults.Location = new System.Drawing.Point(23, 147);
+            this.textboxResults.Location = new System.Drawing.Point(23, 186);
             this.textboxResults.Multiline = true;
             this.textboxResults.Name = "textboxResults";
             this.textboxResults.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textboxResults.Size = new System.Drawing.Size(679, 219);
+            this.textboxResults.Size = new System.Drawing.Size(679, 180);
             this.textboxResults.TabIndex = 12;
             // 
             // buttonCopy
@@ -227,7 +230,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(339, 94);
+            this.label6.Location = new System.Drawing.Point(269, 94);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(95, 13);
             this.label6.TabIndex = 18;
@@ -253,7 +256,7 @@
             // 
             // textboxMaxConsecutive
             // 
-            this.textboxMaxConsecutive.Location = new System.Drawing.Point(440, 121);
+            this.textboxMaxConsecutive.Location = new System.Drawing.Point(370, 121);
             this.textboxMaxConsecutive.Name = "textboxMaxConsecutive";
             this.textboxMaxConsecutive.Size = new System.Drawing.Size(30, 20);
             this.textboxMaxConsecutive.TabIndex = 21;
@@ -262,17 +265,35 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(271, 124);
+            this.label8.Location = new System.Drawing.Point(201, 124);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(163, 13);
             this.label8.TabIndex = 22;
             this.label8.Text = "Max Consecutive Shifts/Rotation";
+            // 
+            // textboxMaxWeekends
+            // 
+            this.textboxMaxWeekends.Location = new System.Drawing.Point(546, 121);
+            this.textboxMaxWeekends.Name = "textboxMaxWeekends";
+            this.textboxMaxWeekends.Size = new System.Drawing.Size(31, 20);
+            this.textboxMaxWeekends.TabIndex = 23;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(413, 124);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(127, 13);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Max Weekends/Rotation";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 402);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.textboxMaxWeekends);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textboxMaxConsecutive);
             this.Controls.Add(this.textBoxMaxSameShifts);
@@ -330,6 +351,8 @@
         private System.Windows.Forms.TextBox textBoxMaxSameShifts;
         private System.Windows.Forms.TextBox textboxMaxConsecutive;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textboxMaxWeekends;
+        private System.Windows.Forms.Label label9;
     }
 }
 
