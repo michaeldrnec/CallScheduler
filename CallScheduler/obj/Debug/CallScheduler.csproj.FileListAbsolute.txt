@@ -1,0 +1,8 @@
+C:\Users\mdrnec\Documents\Visual Studio 2008\Projects\CallScheduler\CallScheduler\bin\Debug\CallScheduler.exe
+C:\Users\mdrnec\Documents\Visual Studio 2008\Projects\CallScheduler\CallScheduler\bin\Debug\CallScheduler.pdb
+C:\Users\mdrnec\Documents\Visual Studio 2008\Projects\CallScheduler\CallScheduler\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mdrnec\Documents\Visual Studio 2008\Projects\CallScheduler\CallScheduler\obj\Debug\CallScheduler.Form1.resources
+C:\Users\mdrnec\Documents\Visual Studio 2008\Projects\CallScheduler\CallScheduler\obj\Debug\CallScheduler.Properties.Resources.resources
+C:\Users\mdrnec\Documents\Visual Studio 2008\Projects\CallScheduler\CallScheduler\obj\Debug\CallScheduler.csproj.GenerateResource.Cache
+C:\Users\mdrnec\Documents\Visual Studio 2008\Projects\CallScheduler\CallScheduler\obj\Debug\CallScheduler.exe
+C:\Users\mdrnec\Documents\Visual Studio 2008\Projects\CallScheduler\CallScheduler\obj\Debug\CallScheduler.pdb
