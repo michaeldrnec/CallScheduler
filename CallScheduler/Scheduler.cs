@@ -137,7 +137,7 @@ namespace CallScheduler {
             if (DoctorHasExceededMaxDaysThisRotation(slot, doctor)) {
                 return false;
             }
-            if (DoctorHasExceededMaxLifetime(doctor)) {
+            if (DoctorHasExceededMaxLifetime(slot, doctor)) {
                 return false;
             }
             if (DoctorHasExceededMaxSameShiftsPerRotation(slot, doctor))
@@ -206,10 +206,10 @@ namespace CallScheduler {
             return Schedule.Where(x => x.doctor == doctor && x.rotationNumber == slot.rotationNumber);
         }
 
-        private bool DoctorHasExceededMaxLifetime(Doctor doctor) {
+        private bool DoctorHasExceededMaxLifetime(Slot slot, Doctor doctor) {
             if (MaxShiftsPerLifetime == 0)
                 return false;
-            return Schedule.Where(x => x.doctor == doctor).Count() >= MaxShiftsPerLifetime;
+            return doctor.TotalShiftCount + (slot.is24 ? 2 : 1) > MaxShiftsPerLifetime;
         }
 
         private bool DoctorHasExceededMaxSameShiftsPerRotation(Slot slot, Doctor doctor)

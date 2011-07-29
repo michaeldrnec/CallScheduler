@@ -15,11 +15,11 @@
       <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Doctor.cs" caret="1982" fromTop="48" />
       <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:DoctorQueue.cs" caret="738" fromTop="8" />
       <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="2392" fromTop="20" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="6759" fromTop="0" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:MaxConsecutiveShiftsRule.cs" caret="90" fromTop="4" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="7307" fromTop="48" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:IRule.cs" caret="109" fromTop="4" />
     </RecentFiles>
     <RecentEdits>
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="7884" fromTop="19" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="7884" fromTop="17" />
       <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="8434" fromTop="24" />
       <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="8716" fromTop="18" />
       <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="8110" fromTop="5" />
@@ -36,7 +36,6 @@
       <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="7072" fromTop="5" />
       <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="7455" fromTop="15" />
       <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="7656" fromTop="23" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="7277" fromTop="8" />
       <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="7425" fromTop="14" />
       <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="7656" fromTop="22" />
       <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="10970" fromTop="12" />
@@ -48,6 +47,9 @@
       <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="1075" fromTop="28" />
       <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="6402" fromTop="24" />
       <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="6759" fromTop="20" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="7310" fromTop="21" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:MaxConsecutiveShiftsRule.cs" caret="90" fromTop="4" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:IRule.cs" caret="109" fromTop="4" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -90,7 +92,7 @@
       <Item value="MaxPerLifetime" priority="3" />
       <Item value="textboxMaxPerLifetime" priority="0" />
       <Item value="checkboxCrossCall" priority="0" />
-      <Item value="bool" priority="2" />
+      <Item value="bool" priority="4" />
       <Item value="maxPerRotation" priority="0" />
       <Item value="maxPerLifetime" priority="0" />
       <Item value="crossCallAllowed" priority="0" />
@@ -130,7 +132,7 @@
       <Item value="MaxSameShifts" priority="2" />
       <Item value="false" priority="5" />
       <Item value="x" priority="3" />
-      <Item value="Slot`0" priority="0" />
+      <Item value="Slot`0" priority="1" />
       <Item value="textboxMaxConsecutive" priority="0" />
       <Item value="maxConsecutiveShifts" priority="0" />
       <Item value="MaxConsecutiveShifts" priority="1" />
@@ -142,6 +144,7 @@
       <Item value="textboxMaxWeekends" priority="0" />
       <Item value="MaxWeekends" priority="3" />
       <Item value="maxWeekends" priority="0" />
+      <Item value="Doctor`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.OpenFileDialog">
       <Item value="ShowDialog`0" priority="1" />
