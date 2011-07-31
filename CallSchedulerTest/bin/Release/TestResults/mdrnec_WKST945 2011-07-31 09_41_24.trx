@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="d0f06f8d-3200-4476-9b02-7b01c69b92e7" name="mdrnec@WKST945 2011-07-31 09:41:24" runUser="SUMTOTAL\mdrnec" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2006">
+  <TestRunConfiguration name="Local Test Run" id="fd78d07f-b39e-47c6-b6ac-273410bbcaba">
+    <Description>This is a default test run configuration for a local test run.</Description>
+    <Deployment runDeploymentRoot="C:\Users\mdrnec\Documents\Visual Studio 2008\Projects\CallScheduler\CallSchedulerTest\bin\Release\TestResults\mdrnec_WKST945 2011-07-31 09_41_24" />
+    <TestTypeSpecific />
+  </TestRunConfiguration>
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <Times creation="2011-07-31T09:41:24.1539907-04:00" queuing="2011-07-31T09:41:24.4653328-04:00" start="2011-07-31T09:41:24.5374120-04:00" finish="2011-07-31T09:41:24.6665539-04:00" />
+  <TestDefinitions>
+    <UnitTest name="MaxConsecutiveShifts" storage="c:\users\mdrnec\documents\visual studio 2008\projects\callscheduler\callschedulertest\bin\release\callschedulertest.dll" id="a1ccb925-4974-adde-98b1-a29c23bf5593">
+      <Css projectStructure="" iteration="" />
+      <Execution timeOut="1800000" id="6c62bc9d-0183-45a7-9de9-4c601380b85c" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <TestMethod codeBase="C:/Users/mdrnec/Documents/Visual Studio 2008/Projects/CallScheduler/CallSchedulerTest/bin/Release/CallSchedulerTest.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter" className="CallSchedulerTest.SchedulerTest, CallSchedulerTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MaxConsecutiveShifts" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="a1ccb925-4974-adde-98b1-a29c23bf5593" executionId="6c62bc9d-0183-45a7-9de9-4c601380b85c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="6c62bc9d-0183-45a7-9de9-4c601380b85c" testId="a1ccb925-4974-adde-98b1-a29c23bf5593" testName="MaxConsecutiveShifts" computerName="WKST945" duration="00:00:00.0321030" startTime="2011-07-31T09:41:24.5644417-04:00" endTime="2011-07-31T09:41:24.6345187-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method CallSchedulerTest.SchedulerTest.MaxConsecutiveShifts threw exception:  System.NullReferenceException: Object reference not set to an instance of an object..</Message>
+          <StackTrace>    at CallSchedulerTest.SchedulerTest.MaxConsecutiveShifts() in C:\Users\mdrnec\Documents\Visual Studio 2008\Projects\CallScheduler\CallSchedulerTest\SchedulerTest.cs:line 50
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

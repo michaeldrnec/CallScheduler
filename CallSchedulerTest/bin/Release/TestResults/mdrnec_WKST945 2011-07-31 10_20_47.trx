@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="1a5d0f84-2afb-4f2b-9549-416ace27b977" name="mdrnec@WKST945 2011-07-31 10:20:47" runUser="SUMTOTAL\mdrnec" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2006">
+  <TestRunConfiguration name="Local Test Run" id="fd78d07f-b39e-47c6-b6ac-273410bbcaba">
+    <Description>This is a default test run configuration for a local test run.</Description>
+    <Deployment runDeploymentRoot="C:\Users\mdrnec\Documents\Visual Studio 2008\Projects\CallScheduler\CallSchedulerTest\bin\Release\TestResults\mdrnec_WKST945 2011-07-31 10_20_47" />
+    <TestTypeSpecific />
+  </TestRunConfiguration>
+  <ResultSummary outcome="Completed">
+    <Counters total="2" executed="2" passed="2" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <Times creation="2011-07-31T10:20:47.4564095-04:00" queuing="2011-07-31T10:20:47.7486431-04:00" start="2011-07-31T10:20:47.8166975-04:00" finish="2011-07-31T10:20:47.9407967-04:00" />
+  <TestDefinitions>
+    <UnitTest name="TrueWhenAlreadyScheduledTwoDaysInARow" storage="c:\users\mdrnec\documents\visual studio 2008\projects\callscheduler\callschedulertest\bin\release\callschedulertest.dll" id="80c7cc84-733b-ad50-7026-7349059147ed">
+      <Css projectStructure="" iteration="" />
+      <Execution timeOut="1800000" id="6ac1241d-f6df-4298-862d-80cb99267306" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <TestMethod codeBase="C:/Users/mdrnec/Documents/Visual Studio 2008/Projects/CallScheduler/CallSchedulerTest/bin/Release/CallSchedulerTest.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter" className="CallSchedulerTest.SchedulerTest, CallSchedulerTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TrueWhenAlreadyScheduledTwoDaysInARow" />
+    </UnitTest>
+    <UnitTest name="TrueWhenDayBeingScheduledWouldExceedMax" storage="c:\users\mdrnec\documents\visual studio 2008\projects\callscheduler\callschedulertest\bin\release\callschedulertest.dll" id="af243682-97df-afb4-606d-49e08023dc7d">
+      <Css projectStructure="" iteration="" />
+      <Execution timeOut="1800000" id="12b5e7d9-7a22-4cf8-b063-cff3f452cd6c" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <TestMethod codeBase="C:/Users/mdrnec/Documents/Visual Studio 2008/Projects/CallScheduler/CallSchedulerTest/bin/Release/CallSchedulerTest.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter" className="CallSchedulerTest.SchedulerTest, CallSchedulerTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TrueWhenDayBeingScheduledWouldExceedMax" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="80c7cc84-733b-ad50-7026-7349059147ed" executionId="6ac1241d-f6df-4298-862d-80cb99267306" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="af243682-97df-afb4-606d-49e08023dc7d" executionId="12b5e7d9-7a22-4cf8-b063-cff3f452cd6c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="6ac1241d-f6df-4298-862d-80cb99267306" testId="80c7cc84-733b-ad50-7026-7349059147ed" testName="TrueWhenAlreadyScheduledTwoDaysInARow" computerName="WKST945" duration="00:00:00.0289906" startTime="2011-07-31T10:20:47.8447199-04:00" endTime="2011-07-31T10:20:47.9127743-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="12b5e7d9-7a22-4cf8-b063-cff3f452cd6c" testId="af243682-97df-afb4-606d-49e08023dc7d" testName="TrueWhenDayBeingScheduledWouldExceedMax" computerName="WKST945" duration="00:00:00.0008328" startTime="2011-07-31T10:20:47.9137751-04:00" endTime="2011-07-31T10:20:47.9147759-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

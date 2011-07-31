@@ -50,6 +50,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textboxMaxWeekends = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.textboxRandomRuns = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -130,7 +132,7 @@
             this.textboxStartDate.Name = "textboxStartDate";
             this.textboxStartDate.Size = new System.Drawing.Size(100, 20);
             this.textboxStartDate.TabIndex = 7;
-            this.textboxStartDate.Text = "1/1/2011";
+            this.textboxStartDate.Text = "9/2/2011";
             this.textboxStartDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textboxEndDate
@@ -139,7 +141,7 @@
             this.textboxEndDate.Name = "textboxEndDate";
             this.textboxEndDate.Size = new System.Drawing.Size(100, 20);
             this.textboxEndDate.TabIndex = 8;
-            this.textboxEndDate.Text = "3/31/2011";
+            this.textboxEndDate.Text = "7/1/2012";
             this.textboxEndDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textboxMaxPerRotation
@@ -173,11 +175,11 @@
             // 
             // textboxResults
             // 
-            this.textboxResults.Location = new System.Drawing.Point(23, 186);
+            this.textboxResults.Location = new System.Drawing.Point(23, 147);
             this.textboxResults.Multiline = true;
             this.textboxResults.Name = "textboxResults";
             this.textboxResults.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textboxResults.Size = new System.Drawing.Size(679, 180);
+            this.textboxResults.Size = new System.Drawing.Size(679, 219);
             this.textboxResults.TabIndex = 12;
             // 
             // buttonCopy
@@ -250,7 +252,7 @@
             this.textBoxMaxSameShifts.Location = new System.Drawing.Point(138, 121);
             this.textBoxMaxSameShifts.Name = "textBoxMaxSameShifts";
             this.textBoxMaxSameShifts.Size = new System.Drawing.Size(37, 20);
-            this.textBoxMaxSameShifts.TabIndex = 20;
+            this.textBoxMaxSameShifts.TabIndex = 12;
             this.textBoxMaxSameShifts.Text = "2";
             this.textBoxMaxSameShifts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -259,7 +261,7 @@
             this.textboxMaxConsecutive.Location = new System.Drawing.Point(370, 121);
             this.textboxMaxConsecutive.Name = "textboxMaxConsecutive";
             this.textboxMaxConsecutive.Size = new System.Drawing.Size(30, 20);
-            this.textboxMaxConsecutive.TabIndex = 21;
+            this.textboxMaxConsecutive.TabIndex = 13;
             this.textboxMaxConsecutive.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label8
@@ -276,7 +278,7 @@
             this.textboxMaxWeekends.Location = new System.Drawing.Point(546, 121);
             this.textboxMaxWeekends.Name = "textboxMaxWeekends";
             this.textboxMaxWeekends.Size = new System.Drawing.Size(31, 20);
-            this.textboxMaxWeekends.TabIndex = 23;
+            this.textboxMaxWeekends.TabIndex = 14;
             // 
             // label9
             // 
@@ -287,11 +289,31 @@
             this.label9.TabIndex = 24;
             this.label9.Text = "Max Weekends/Rotation";
             // 
+            // textboxRandomRuns
+            // 
+            this.textboxRandomRuns.Location = new System.Drawing.Point(158, 374);
+            this.textboxRandomRuns.Name = "textboxRandomRuns";
+            this.textboxRandomRuns.Size = new System.Drawing.Size(47, 20);
+            this.textboxRandomRuns.TabIndex = 25;
+            this.textboxRandomRuns.Text = "10";
+            this.textboxRandomRuns.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(77, 377);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(75, 13);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Random Runs";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 402);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.textboxRandomRuns);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textboxMaxWeekends);
             this.Controls.Add(this.label8);
@@ -353,6 +375,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textboxMaxWeekends;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textboxRandomRuns;
+        private System.Windows.Forms.Label label10;
     }
 }
 

@@ -15,9 +15,14 @@ namespace CallScheduler
         private int MaxShiftsPerRotation;
         private int MaxShiftsPerLifetime;
         private int MaxSameShifts;
-        private int MaxConsecutiveShifts;
+        public int MaxConsecutiveShifts;
         private int MaxWeekends;
         private bool CrossCallAllowed;
+
+        public Scheduler()
+        {
+            
+        }
 
         public Scheduler(string rotationFileName, string start, string end, List<Doctor> doctors,
                          int maxPerRotation, int maxPerLifetime, int maxSameShifts, int maxConsecutiveShifts,
@@ -198,7 +203,7 @@ namespace CallScheduler
             {
                 return false;
             }
-            if (DoctorHasExceededMaxConsecutiveShifts(slot, doctor))
+            if (DoctorWouldExceedMaxConsecutiveShifts(slot, doctor))
             {
                 return false;
             }
@@ -216,12 +221,13 @@ namespace CallScheduler
             return GetSlotsByDoctorAndRotation(doctor, slot).Count() >= MaxWeekends;
         }
 
-        private bool DoctorHasExceededMaxConsecutiveShifts(Slot slot, Doctor doctor)
+        public bool DoctorWouldExceedMaxConsecutiveShifts(Slot slot, Doctor doctor)
         {
             if (MaxConsecutiveShifts == 0)
                 return false;
-            var list = GetSlotsByDoctorAndRotation(doctor, slot).OrderBy(x => x.week);
-            return CalcMaxConsecutiveShifts(list) >= MaxConsecutiveShifts;
+            var list = GetSlotsByDoctorAndRotation(doctor, slot).ToList();
+            list.Add(slot);
+            return CalcMaxConsecutiveShifts(list.OrderBy(x => x.week)) > MaxConsecutiveShifts;
         }
 
         private int CalcMaxConsecutiveShifts(IOrderedEnumerable<Slot> list)

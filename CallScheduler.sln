@@ -5,7 +5,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallScheduler", "CallSchedu
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CallSchedulerInstall", "CallSchedulerInstall\CallSchedulerInstall.vdproj", "{DA31508D-D4EC-47ED-9675-10BC14D010D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallSchedulerTest", "CallSchedulerTest\CallSchedulerTest.csproj", "{AC7CFB84-77C1-4EA9-9C95-4D1B160FC02A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1604DB29-8F1D-4F7D-ACCE-C419AA15256B}"
+	ProjectSection(SolutionItems) = preProject
+		CallScheduler.vsmdi = CallScheduler.vsmdi
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = CallScheduler.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -17,6 +28,10 @@ Global
 		{A53FF4B0-5633-4381-BD18-8088BE4D0DC6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DA31508D-D4EC-47ED-9675-10BC14D010D3}.Debug|Any CPU.ActiveCfg = Debug
 		{DA31508D-D4EC-47ED-9675-10BC14D010D3}.Release|Any CPU.ActiveCfg = Release
+		{AC7CFB84-77C1-4EA9-9C95-4D1B160FC02A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC7CFB84-77C1-4EA9-9C95-4D1B160FC02A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC7CFB84-77C1-4EA9-9C95-4D1B160FC02A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC7CFB84-77C1-4EA9-9C95-4D1B160FC02A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

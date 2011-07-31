@@ -1,0 +1,9 @@
+C:\Users\mdrnec\Documents\Visual Studio 2008\Projects\CallScheduler\CallSchedulerTest\bin\Release\CallSchedulerTest.dll
+C:\Users\mdrnec\Documents\Visual Studio 2008\Projects\CallScheduler\CallSchedulerTest\bin\Release\CallSchedulerTest.pdb
+C:\Users\mdrnec\Documents\Visual Studio 2008\Projects\CallScheduler\CallSchedulerTest\bin\Release\CallScheduler.exe
+C:\Users\mdrnec\Documents\Visual Studio 2008\Projects\CallScheduler\CallSchedulerTest\bin\Release\CallScheduler.pdb
+C:\Users\mdrnec\Documents\Visual Studio 2008\Projects\CallScheduler\CallSchedulerTest\bin\Release\CallScheduler_Accessor.dll
+C:\Users\mdrnec\Documents\Visual Studio 2008\Projects\CallScheduler\CallSchedulerTest\bin\Release\CallScheduler_Accessor.pdb
+C:\Users\mdrnec\Documents\Visual Studio 2008\Projects\CallScheduler\CallSchedulerTest\obj\Release\ResolveAssemblyReference.cache
+C:\Users\mdrnec\Documents\Visual Studio 2008\Projects\CallScheduler\CallSchedulerTest\obj\Release\CallSchedulerTest.dll
+C:\Users\mdrnec\Documents\Visual Studio 2008\Projects\CallScheduler\CallSchedulerTest\obj\Release\CallSchedulerTest.pdb

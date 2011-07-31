@@ -1,3 +1,4 @@
 <Modules>
   <Module PersistentId="A53FF4B0-5633-4381-BD18-8088BE4D0DC6" ModuleId="CallScheduler" />
+  <Module PersistentId="AC7CFB84-77C1-4EA9-9C95-4D1B160FC02A" ModuleId="CallSchedulerTest" />
 </Modules>

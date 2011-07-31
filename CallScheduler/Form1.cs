@@ -77,8 +77,13 @@ namespace CallScheduler
             try
             {
                 var doctors = Doctor.GetDoctorsFromFile(textboxDoctorFilename.Text);
-                var seedList = new int[10];
-                for (var i = 0; i < 10; i++)
+                int runs;
+                if (!int.TryParse(textboxRandomRuns.Text, out runs))
+                {
+                    runs = 0;
+                }
+                var seedList = new int[runs];
+                for (var i = 0; i < runs; i++)
                 {
                     seedList[i] = DateTime.Now.Ticks.GetHashCode();
                     System.Threading.Thread.Sleep(15);
@@ -90,7 +95,7 @@ namespace CallScheduler
                 var best = keep.BlankCount();
                 var bestSeed = 0;
                 var randomOutput = new StringBuilder();
-                randomOutput.AppendLine(string.Format("Blanks: {0}  Seed: {1}", best, bestSeed));
+                randomOutput.AppendLine(string.Format("Default Blanks: {0}  Seed: {1}", best, bestSeed));
 
                 foreach (var seed in seedList)
                 {
@@ -101,19 +106,19 @@ namespace CallScheduler
 
                     schedule.Populate(seed);
                     var blankCount = schedule.BlankCount();
-                    randomOutput.AppendLine(string.Format("Blanks: {0}  Seed: {1}", blankCount, seed));
                     if (blankCount < best)
                     {
                         keep = schedule;
                         best = blankCount;
                         bestSeed = seed;
                     }
+                    
                 }
                 if (keep != null)
                 {
+                    randomOutput.AppendLine(string.Format("Best Blanks: {0}  Seed: {1}", best, bestSeed));
                     var output = new StringBuilder();
                     output.AppendLine(randomOutput.ToString());
-                    output.AppendLine(string.Format("Best seed was: {0}", bestSeed));
                     output.AppendLine();
                     output.AppendLine(keep.OutputSchedule().ToString());
                     output.AppendLine();

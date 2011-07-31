@@ -12,44 +12,48 @@
       <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Slot.cs" caret="0" fromTop="0" />
       <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Program.cs" caret="0" fromTop="0" />
       <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.Designer.cs" caret="15822" fromTop="18" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Doctor.cs" caret="1982" fromTop="48" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="2392" fromTop="20" />
       <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:MaxConsecutiveShiftsRule.cs" caret="90" fromTop="4" />
       <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:IRule.cs" caret="109" fromTop="4" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:DoctorQueue.cs" caret="1380" fromTop="23" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="8620" fromTop="11" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:DoctorQueue.cs" caret="1380" fromTop="10" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Doctor.cs" caret="607" fromTop="19" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="1424" fromTop="0" />
+      <File id="AC7CFB84-77C1-4EA9-9C95-4D1B160FC02A/f:AuthoringTests.txt" caret="6720" fromTop="6" />
+      <File id="AC7CFB84-77C1-4EA9-9C95-4D1B160FC02A/f:UnitTest1.cs" caret="1719" fromTop="24" />
+      <File id="AC7CFB84-77C1-4EA9-9C95-4D1B160FC02A/f:SettingsTest.cs" caret="0" fromTop="0" />
+      <File id="AC7CFB84-77C1-4EA9-9C95-4D1B160FC02A/f:SchedulerTest.cs" caret="1445" fromTop="19" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="4778" fromTop="19" />
     </RecentFiles>
     <RecentEdits>
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="8116" fromTop="5" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="8927" fromTop="24" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Doctor.cs" caret="2324" fromTop="18" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.Designer.cs" caret="15822" fromTop="18" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:DoctorQueue.cs" caret="738" fromTop="8" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:DoctorQueue.cs" caret="1808" fromTop="8" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="114" fromTop="6" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="13" fromTop="0" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="7051" fromTop="15" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="6178" fromTop="23" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="7051" fromTop="21" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="7078" fromTop="5" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="7461" fromTop="15" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="7662" fromTop="23" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="7431" fromTop="14" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="7662" fromTop="22" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="10983" fromTop="12" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="2338" fromTop="16" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="1661" fromTop="12" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="2737" fromTop="14" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="782" fromTop="20" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="510" fromTop="16" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="1075" fromTop="28" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="6408" fromTop="24" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="6765" fromTop="20" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="7316" fromTop="21" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:MaxConsecutiveShiftsRule.cs" caret="90" fromTop="4" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:IRule.cs" caret="109" fromTop="4" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="6033" fromTop="8" />
-      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="8620" fromTop="11" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="11765" fromTop="9" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="11953" fromTop="13" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="1426" fromTop="20" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Doctor.cs" caret="555" fromTop="18" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="406" fromTop="18" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="406" fromTop="21" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="406" fromTop="1" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="406" fromTop="20" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="406" fromTop="12" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="406" fromTop="12" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="12685" fromTop="21" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="357" fromTop="0" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="406" fromTop="7" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="406" fromTop="11" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="406" fromTop="5" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="406" fromTop="19" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="406" fromTop="0" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="4627" fromTop="11" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="3408" fromTop="16" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="3944" fromTop="20" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="4496" fromTop="15" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="2794" fromTop="4" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Form1.cs" caret="1677" fromTop="0" />
+      <File id="AC7CFB84-77C1-4EA9-9C95-4D1B160FC02A/f:UnitTest1.cs" caret="1887" fromTop="24" />
+      <File id="AC7CFB84-77C1-4EA9-9C95-4D1B160FC02A/f:SettingsTest.cs" caret="0" fromTop="0" />
+      <File id="AC7CFB84-77C1-4EA9-9C95-4D1B160FC02A/f:SchedulerTest.cs" caret="0" fromTop="0" />
+      <File id="AC7CFB84-77C1-4EA9-9C95-4D1B160FC02A/f:SchedulerTest.cs" caret="193" fromTop="6" />
+      <File id="AC7CFB84-77C1-4EA9-9C95-4D1B160FC02A/f:SchedulerTest.cs" caret="258" fromTop="10" />
+      <File id="AC7CFB84-77C1-4EA9-9C95-4D1B160FC02A/f:SchedulerTest.cs" caret="1445" fromTop="19" />
+      <File id="A53FF4B0-5633-4381-BD18-8088BE4D0DC6/f:Scheduler.cs" caret="624" fromTop="19" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -71,22 +75,22 @@
       <Item value="textboxDoctorFilename" priority="2" />
       <Item value="rotationsFile" priority="1" />
       <Item value="textboxRotationsFilename" priority="2" />
-      <Item value="System" priority="0" />
+      <Item value="System" priority="3" />
       <Item value="Application`0" priority="0" />
       <Item value="textboxStartDate" priority="2" />
       <Item value="textboxEndDate" priority="2" />
-      <Item value="if" priority="14" />
+      <Item value="if" priority="19" />
       <Item value="TextBox`0" priority="0" />
-      <Item value="string" priority="6" />
+      <Item value="string" priority="7" />
       <Item value="MessageBox`0" priority="1" />
       <Item value="Message`0" priority="0" />
-      <Item value="return" priority="15" />
-      <Item value="var" priority="9" />
+      <Item value="return" priority="18" />
+      <Item value="var" priority="25" />
       <Item value="textboxResults" priority="4" />
-      <Item value="new" priority="6" />
-      <Item value="StringBuilder`0" priority="4" />
+      <Item value="new" priority="17" />
+      <Item value="StringBuilder`0" priority="5" />
       <Item value="output" priority="14" />
-      <Item value="int" priority="16" />
+      <Item value="int" priority="24" />
       <Item value="textboxMaxPerRotation" priority="0" />
       <Item value="MaxPerRotation" priority="1" />
       <Item value="MaxPerLifetime" priority="3" />
@@ -97,19 +101,19 @@
       <Item value="maxPerLifetime" priority="0" />
       <Item value="crossCallAllowed" priority="0" />
       <Item value="Clipboard`0" priority="0" />
-      <Item value="schedule" priority="1" />
+      <Item value="schedule" priority="5" />
       <Item value="day" priority="2" />
-      <Item value="public" priority="5" />
+      <Item value="public" priority="6" />
       <Item value="doctorToWorkOn" priority="0" />
-      <Item value="i" priority="0" />
+      <Item value="i" priority="11" />
       <Item value="doctorQueue" priority="0" />
       <Item value="currentDoctor" priority="2" />
-      <Item value="null" priority="0" />
-      <Item value="doctors" priority="3" />
-      <Item value="Schedule" priority="2" />
+      <Item value="null" priority="1" />
+      <Item value="doctors" priority="4" />
+      <Item value="Schedule" priority="6" />
       <Item value="is24" priority="1" />
       <Item value="doctor" priority="5" />
-      <Item value="else" priority="1" />
+      <Item value="else" priority="2" />
       <Item value="slot" priority="7" />
       <Item value="z" priority="0" />
       <Item value="orderedList" priority="0" />
@@ -124,14 +128,14 @@
       <Item value="throw" priority="1" />
       <Item value="Exception" priority="1" />
       <Item value="e" priority="0" />
-      <Item value="DateTime`0" priority="1" />
-      <Item value="Rotations" priority="3" />
+      <Item value="DateTime`0" priority="4" />
+      <Item value="Rotations" priority="4" />
       <Item value="startDate" priority="0" />
       <Item value="endDate" priority="0" />
       <Item value="textBoxMaxSameShifts" priority="0" />
       <Item value="MaxSameShifts" priority="2" />
       <Item value="false" priority="5" />
-      <Item value="x" priority="3" />
+      <Item value="x" priority="6" />
       <Item value="Slot`0" priority="1" />
       <Item value="textboxMaxConsecutive" priority="0" />
       <Item value="maxConsecutiveShifts" priority="0" />
@@ -144,8 +148,33 @@
       <Item value="textboxMaxWeekends" priority="0" />
       <Item value="MaxWeekends" priority="3" />
       <Item value="maxWeekends" priority="0" />
-      <Item value="Doctor`0" priority="1" />
+      <Item value="Doctor`0" priority="2" />
       <Item value="MaxShiftsPerLifetime" priority="0" />
+      <Item value="Random`0" priority="2" />
+      <Item value="seed" priority="2" />
+      <Item value="List" priority="1" />
+      <Item value="for" priority="4" />
+      <Item value="order" priority="19" />
+      <Item value="Length" priority="3" />
+      <Item value="random" priority="0" />
+      <Item value="swapIndex" priority="1" />
+      <Item value="temp" priority="0" />
+      <Item value="OriginalRank" priority="0" />
+      <Item value="newDoc" priority="4" />
+      <Item value="List&lt;string&gt;" priority="0" />
+      <Item value="Vacation" priority="0" />
+      <Item value="Name" priority="0" />
+      <Item value="Doctors" priority="0" />
+      <Item value="seedList" priority="2" />
+      <Item value="foreach" priority="0" />
+      <Item value="best" priority="3" />
+      <Item value="Scheduler`0" priority="2" />
+      <Item value="keep" priority="0" />
+      <Item value="bestSeed" priority="2" />
+      <Item value="AppendLine`0" priority="0" />
+      <Item value="randomOutput" priority="1" />
+      <Item value="Threading" priority="0" />
+      <Item value="Thread`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.OpenFileDialog">
       <Item value="ShowDialog`0" priority="1" />
@@ -159,18 +188,19 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
       <Item value="Empty" priority="4" />
-      <Item value="Format`0" priority="1" />
+      <Item value="Format`0" priority="3" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
       <Item value="Show`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Text.StringBuilder">
-      <Item value="AppendLine`0" priority="6" />
+      <Item value="AppendLine`0" priority="9" />
       <Item value="Append`0" priority="3" />
-      <Item value="ToString`0" priority="1" />
+      <Item value="ToString`0" priority="3" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Int32">
       <Item value="TryParse`0" priority="1" />
+      <Item value="MaxValue" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.CheckBox">
       <Item value="Checked" priority="0" />
@@ -182,27 +212,35 @@
       <Item value="OutputDoctors`0" priority="0" />
       <Item value="GetMinRotationDate`0" priority="0" />
       <Item value="GetMaxRotationDate`0" priority="0" />
+      <Item value="BlankCount`0" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:CallScheduler.Slot">
       <Item value="location" priority="0" />
       <Item value="is24" priority="4" />
-      <Item value="doctor" priority="0" />
+      <Item value="doctor" priority="1" />
       <Item value="rotationNumber" priority="1" />
       <Item value="shift" priority="1" />
       <Item value="week" priority="3" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:CallScheduler.Doctor">
-      <Item value="OriginalRank" priority="2" />
-      <Item value="Name" priority="1" />
+      <Item value="OriginalRank" priority="3" />
+      <Item value="Name" priority="2" />
       <Item value="ShiftCount" priority="2" />
       <Item value="DoubleShiftsWorked" priority="2" />
       <Item value="TotalShiftCount" priority="2" />
+      <Item value="Rotations" priority="1" />
+      <Item value="Vacation" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
-      <Item value="Where`1" priority="1" />
+      <Item value="Where`1" priority="2" />
       <Item value="OrderBy`2" priority="1" />
       <Item value="First`1" priority="1" />
       <Item value="Last`1" priority="1" />
+      <Item value="Count" priority="3" />
+      <Item value="Add`0" priority="0" />
+      <Item value="CopyTo`0" priority="1" />
+      <Item value="Select`2" priority="2" />
+      <Item value="AddRange`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
       <Item value="First`1" priority="0" />
@@ -211,6 +249,8 @@
       <Item value="Concat`1" priority="0" />
       <Item value="OrderBy`2" priority="0" />
       <Item value="Count`1" priority="0" />
+      <Item value="Cast`1" priority="0" />
+      <Item value="ToList`1" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Linq.IOrderedEnumerable`1">
       <Item value="ThenBy`2" priority="2" />
@@ -218,6 +258,7 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.String">
       <Item value="Trim`0" priority="1" />
+      <Item value="Clone`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Exception">
       <Item value="Message" priority="0" />
@@ -228,6 +269,22 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.DateTime">
       <Item value="ToString`0" priority="0" />
+      <Item value="Year" priority="0" />
+      <Item value="Month" priority="0" />
+      <Item value="Day" priority="0" />
+      <Item value="Ticks" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Random">
+      <Item value="Next`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int64">
+      <Item value="GetHashCode`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread">
+      <Item value="Sleep`0" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>
