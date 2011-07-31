@@ -1,15 +1,19 @@
 ﻿using System;
+using System.Text;
 using System.Windows.Forms;
 
-namespace CallScheduler {
-    public partial class Form1 : Form {
-
+namespace CallScheduler
+{
+    public partial class Form1 : Form
+    {
         public string Results
         {
             get { return textboxResults.Text; }
             set { textboxResults.Text = value; }
         }
-        public Form1() {
+
+        public Form1()
+        {
             InitializeComponent();
         }
 
@@ -38,7 +42,8 @@ namespace CallScheduler {
             Application.Exit();
         }
 
-        private void buttonRun_Click(object sender, System.EventArgs e) {
+        private void buttonRun_Click(object sender, System.EventArgs e)
+        {
             if (textboxDoctorFilename.Text == string.Empty
                 || textboxRotationsFilename.Text == string.Empty
                 || textboxStartDate.Text == string.Empty
@@ -56,27 +61,67 @@ namespace CallScheduler {
             {
                 MaxPerLifetime = 0;
             }
-            if (!int.TryParse(textBoxMaxSameShifts.Text, out MaxSameShifts)) {
+            if (!int.TryParse(textBoxMaxSameShifts.Text, out MaxSameShifts))
+            {
                 MaxSameShifts = 0;
             }
-            if (!int.TryParse(textboxMaxConsecutive.Text, out MaxConsecutiveShifts)) {
+            if (!int.TryParse(textboxMaxConsecutive.Text, out MaxConsecutiveShifts))
+            {
                 MaxConsecutiveShifts = 0;
             }
-            if (!int.TryParse(textboxMaxWeekends.Text, out MaxWeekends)) {
+            if (!int.TryParse(textboxMaxWeekends.Text, out MaxWeekends))
+            {
                 MaxWeekends = 0;
             }
 
             try
             {
                 var doctors = Doctor.GetDoctorsFromFile(textboxDoctorFilename.Text);
-                var schedule = new Scheduler(textboxRotationsFilename.Text, textboxStartDate.Text, textboxEndDate.Text,
-                                             doctors, MaxPerRotation, MaxPerLifetime, MaxSameShifts, MaxConsecutiveShifts, MaxWeekends, checkboxCrossCall.Checked);
-                schedule.Populate();
-                var output = schedule.OutputSchedule();
-                output.AppendLine();
-                output.Append(schedule.OutputDoctors(doctors).ToString());
-                textboxResults.Text = output.ToString();
-            } catch (Exception error)
+                var seedList = new int[10];
+                for (var i = 0; i < 10; i++)
+                {
+                    seedList[i] = DateTime.Now.Ticks.GetHashCode();
+                    System.Threading.Thread.Sleep(15);
+                }
+                var keep = new Scheduler(textboxRotationsFilename.Text, textboxStartDate.Text, textboxEndDate.Text,
+                                         doctors, MaxPerRotation, MaxPerLifetime, MaxSameShifts, MaxConsecutiveShifts,
+                                         MaxWeekends, checkboxCrossCall.Checked);
+                keep.Populate(0);
+                var best = keep.BlankCount();
+                var bestSeed = 0;
+                var randomOutput = new StringBuilder();
+                randomOutput.AppendLine(string.Format("Blanks: {0}  Seed: {1}", best, bestSeed));
+
+                foreach (var seed in seedList)
+                {
+                    var schedule = new Scheduler(textboxRotationsFilename.Text, textboxStartDate.Text,
+                                                 textboxEndDate.Text,
+                                                 doctors, MaxPerRotation, MaxPerLifetime, MaxSameShifts,
+                                                 MaxConsecutiveShifts, MaxWeekends, checkboxCrossCall.Checked);
+
+                    schedule.Populate(seed);
+                    var blankCount = schedule.BlankCount();
+                    randomOutput.AppendLine(string.Format("Blanks: {0}  Seed: {1}", blankCount, seed));
+                    if (blankCount < best)
+                    {
+                        keep = schedule;
+                        best = blankCount;
+                        bestSeed = seed;
+                    }
+                }
+                if (keep != null)
+                {
+                    var output = new StringBuilder();
+                    output.AppendLine(randomOutput.ToString());
+                    output.AppendLine(string.Format("Best seed was: {0}", bestSeed));
+                    output.AppendLine();
+                    output.AppendLine(keep.OutputSchedule().ToString());
+                    output.AppendLine();
+                    output.Append(keep.OutputDoctors().ToString());
+                    textboxResults.Text = output.ToString();
+                }
+            }
+            catch (Exception error)
             {
                 Results = error.Message;
             }

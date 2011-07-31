@@ -2,16 +2,26 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Windows.Forms;
 
 namespace CallScheduler {
-    public class Doctor {
+    public class Doctor: ICloneable {
         public string Name;
         public List<DateTime> Vacation = new List<DateTime>();
         public List<string> Rotations;
         public int OriginalRank;
         public int TotalShiftCount = 0;
         public int DoubleShiftsWorked = 0;
+
+        public object Clone()
+        {
+            var newDoc = new Doctor();
+            newDoc.OriginalRank = OriginalRank;
+//            newDoc.Rotations = new List<string>();
+//            newDoc.Rotations = Rotations.Select(x => (string) x.Clone()).ToList();
+            newDoc.Vacation = Vacation.Select(x => new DateTime(x.Year, x.Month, x.Day)).ToList();
+            newDoc.Name = Name;
+            return newDoc;
+        }
 
         public bool HasVacation(Slot slot) {
             return Vacation.Any(x => x == slot.date);
