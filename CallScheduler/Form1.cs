@@ -44,53 +44,19 @@ namespace CallScheduler
 
         private void buttonRun_Click(object sender, System.EventArgs e)
         {
-            if (textboxDoctorFilename.Text == string.Empty
-                || textboxRotationsFilename.Text == string.Empty
-                || textboxStartDate.Text == string.Empty
-                || textboxEndDate.Text == string.Empty)
+            if (AnyRequiredFieldsEmpty())
             {
                 MessageBox.Show("Not all required fields are filled.");
                 return;
             }
-            int MaxPerRotation, MaxPerLifetime, MaxSameShifts, MaxConsecutiveShifts, MaxWeekends;
-            if (!int.TryParse(textboxMaxPerRotation.Text, out MaxPerRotation))
-            {
-                MaxPerRotation = 0;
-            }
-            if (!int.TryParse(textboxMaxPerLifetime.Text, out MaxPerLifetime))
-            {
-                MaxPerLifetime = 0;
-            }
-            if (!int.TryParse(textBoxMaxSameShifts.Text, out MaxSameShifts))
-            {
-                MaxSameShifts = 0;
-            }
-            if (!int.TryParse(textboxMaxConsecutive.Text, out MaxConsecutiveShifts))
-            {
-                MaxConsecutiveShifts = 0;
-            }
-            if (!int.TryParse(textboxMaxWeekends.Text, out MaxWeekends))
-            {
-                MaxWeekends = 0;
-            }
+            var bean = GetSchedulerConfigParams();
 
             try
             {
                 var doctors = Doctor.GetDoctorsFromFile(textboxDoctorFilename.Text);
-                int runs;
-                if (!int.TryParse(textboxRandomRuns.Text, out runs))
-                {
-                    runs = 0;
-                }
-                var seedList = new int[runs];
-                for (var i = 0; i < runs; i++)
-                {
-                    seedList[i] = DateTime.Now.Ticks.GetHashCode();
-                    System.Threading.Thread.Sleep(15);
-                }
-                var keep = new Scheduler(textboxRotationsFilename.Text, textboxStartDate.Text, textboxEndDate.Text,
-                                         doctors, MaxPerRotation, MaxPerLifetime, MaxSameShifts, MaxConsecutiveShifts,
-                                         MaxWeekends, checkboxCrossCall.Checked);
+                var runs = GetNumberOfRandomRuns();
+                var seedList = GetSeedList(runs);
+                var keep = new Scheduler(doctors, bean);
                 keep.Populate(0);
                 var best = keep.BlankCount();
                 var bestSeed = 0;
@@ -99,10 +65,7 @@ namespace CallScheduler
 
                 foreach (var seed in seedList)
                 {
-                    var schedule = new Scheduler(textboxRotationsFilename.Text, textboxStartDate.Text,
-                                                 textboxEndDate.Text,
-                                                 doctors, MaxPerRotation, MaxPerLifetime, MaxSameShifts,
-                                                 MaxConsecutiveShifts, MaxWeekends, checkboxCrossCall.Checked);
+                    var schedule = new Scheduler(doctors, bean);
 
                     schedule.Populate(seed);
                     var blankCount = schedule.BlankCount();
@@ -132,9 +95,78 @@ namespace CallScheduler
             }
         }
 
+        private SchedulerBean GetSchedulerConfigParams()
+        {
+            var bean = new SchedulerBean();
+            
+            if (!int.TryParse(textboxMaxPerRotation.Text, out bean.MaxPerRotation))
+            {
+                bean.MaxPerRotation = 0;
+            }
+            if (!int.TryParse(textboxMaxPerLifetime.Text, out bean.MaxPerLifetime))
+            {
+                bean.MaxPerLifetime = 0;
+            }
+            if (!int.TryParse(textBoxMaxSameShifts.Text, out bean.MaxSameShifts))
+            {
+                bean.MaxSameShifts = 0;
+            }
+            if (!int.TryParse(textboxMaxConsecutive.Text, out bean.MaxConsecutiveShifts))
+            {
+                bean.MaxConsecutiveShifts = 0;
+            }
+            if (!int.TryParse(textboxMaxWeekends.Text, out bean.MaxWeekends))
+            {
+                bean.MaxWeekends = 0;
+            }
+            bean.startDate = textboxStartDate.Text;
+            bean.endDate = textboxEndDate.Text;
+            bean.crossCall = checkboxCrossCall.Checked;
+            bean.rotationsFilename = textboxRotationsFilename.Text;
+            return bean;
+        }
+
+        private int GetNumberOfRandomRuns()
+        {
+            int runs;
+            if (!int.TryParse(textboxRandomRuns.Text, out runs))
+            {
+                runs = 0;
+            }
+            return runs;
+        }
+
+        private int[] GetSeedList(int runs)
+        {
+            var seedList = new int[runs];
+            for (var i = 0; i < runs; i++)
+            {
+                seedList[i] = DateTime.Now.Ticks.GetHashCode();
+                System.Threading.Thread.Sleep(15);
+            }
+            return seedList;
+        }
+
+        private bool AnyRequiredFieldsEmpty()
+        {
+            return textboxDoctorFilename.Text == string.Empty
+                   || textboxRotationsFilename.Text == string.Empty
+                   || textboxStartDate.Text == string.Empty
+                   || textboxEndDate.Text == string.Empty;
+        }
+
         private void buttonCopy_Click(object sender, EventArgs e)
         {
             Clipboard.SetDataObject(textboxResults.Text);
         }
     }
+}
+
+public class SchedulerBean
+{
+    public int MaxPerRotation, MaxPerLifetime, MaxSameShifts, MaxConsecutiveShifts, MaxWeekends;
+    public string rotationsFilename;
+    public string startDate;
+    public string endDate;
+    public bool crossCall;
 }

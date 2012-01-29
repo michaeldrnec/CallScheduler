@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -12,7 +11,7 @@ namespace CallScheduler
         public List<Slot> Schedule;
         public List<Rotation> Rotations;
         public List<Doctor> Doctors;
-        private int MaxShiftsPerRotation;
+        public int MaxShiftsPerRotation;
         private int MaxShiftsPerLifetime;
         private int MaxSameShifts;
         public int MaxConsecutiveShifts;
@@ -21,27 +20,23 @@ namespace CallScheduler
 
         public Scheduler()
         {
-            
         }
 
-        public Scheduler(string rotationFileName, string start, string end, List<Doctor> doctors,
-                         int maxPerRotation, int maxPerLifetime, int maxSameShifts, int maxConsecutiveShifts,
-                         int maxWeekends,
-                         bool crossCallAllowed)
+        public Scheduler(List<Doctor> doctors, SchedulerBean bean)
         {
-            MaxShiftsPerRotation = maxPerRotation;
-            MaxShiftsPerLifetime = maxPerLifetime;
-            MaxSameShifts = maxSameShifts;
-            MaxConsecutiveShifts = maxConsecutiveShifts;
-            MaxWeekends = maxWeekends;
-            CrossCallAllowed = crossCallAllowed;
+            MaxShiftsPerRotation = bean.MaxPerRotation;
+            MaxShiftsPerLifetime = bean.MaxPerLifetime;
+            MaxSameShifts = bean.MaxSameShifts;
+            MaxConsecutiveShifts = bean.MaxConsecutiveShifts;
+            MaxWeekends = bean.MaxWeekends;
+            CrossCallAllowed = bean.crossCall;
 
             Schedule = new List<Slot>();
             Rotations = new List<Rotation>();
             Doctors = doctors.Select(x => x.Clone()).Cast<Doctor>().ToList();
-            LoadRotations(rotationFileName);
-            var startDate = DateTime.Parse(start);
-            var endDate = DateTime.Parse(end);
+            LoadRotations(bean.rotationsFilename);
+            var startDate = DateTime.Parse(bean.startDate);
+            var endDate = DateTime.Parse(bean.endDate);
             if (startDate < Rotations.First().startDate || endDate > Rotations.Last().endDate)
             {
                 throw (new Exception("Start/End dates are outside the range of loaded rotations."));
@@ -256,12 +251,29 @@ namespace CallScheduler
             return Schedule.Where(x => x.week == slot.week).Where(x => x.doctor == doctor).Any();
         }
 
-        private bool DoctorHasExceededMaxDaysThisRotation(Slot slot, Doctor doctor)
+        public bool DoctorHasExceededMaxDaysThisRotation(Slot slot, Doctor doctor)
         {
             if (MaxShiftsPerRotation == 0)
                 return false;
-            return GetSlotsByDoctorAndRotation(doctor, slot).Count() >=
+            var list = GetSlotsByDoctorAndRotation(doctor, slot).ToList();
+            list.Add(slot);
+
+            return CountShifts(list) >
                    MaxShiftsPerRotation;
+        }
+
+        private int CountShifts(IList<Slot> listOfShifts)
+        {
+            var count = 0;
+            foreach (var slot in listOfShifts)
+            {
+                count++;
+                if (slot.is24)
+                {
+                    count++;
+                }
+            }
+            return count;
         }
 
         private IEnumerable<Slot> GetSlotsByDoctorAndRotation(Doctor doctor, Slot slot)

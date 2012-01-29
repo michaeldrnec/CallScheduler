@@ -75,5 +75,65 @@ namespace CallSchedulerTest {
 
             Assert.IsTrue(scheduler.DoctorWouldExceedMaxConsecutiveShifts(scheduler.Schedule[1], doctor));
         }
+
+        [TestMethod]
+        public void TrueWhenTwoSaturdaysExceedsMaxShiftsPerRotation()
+        {
+            var doctor = new Doctor();
+            doctor.Name = "House";
+            var scheduler = new Scheduler();
+            scheduler.Schedule = new List<Slot>();
+            scheduler.Schedule.Add(new Slot(new DateTime(2011, 9, 3), "CT", 2, true, 1, true, 1));
+            scheduler.Schedule.Add(new Slot(new DateTime(2011, 9, 10), "CT", 2, true, 2, true, 1));
+            scheduler.Schedule.Add(new Slot(new DateTime(2011, 9, 17), "CT", 2, true, 3, true, 1));
+            scheduler.Schedule[0].doctor = doctor;
+
+            scheduler.MaxShiftsPerRotation = 3;
+            Assert.IsTrue(scheduler.DoctorHasExceededMaxDaysThisRotation(scheduler.Schedule[1], doctor));
+        }
+        [TestMethod]
+        public void FalseWhenMaxShiftsPerRotationIsZero() {
+            var doctor = new Doctor();
+            doctor.Name = "House";
+            var scheduler = new Scheduler();
+            scheduler.Schedule = new List<Slot>();
+            scheduler.Schedule.Add(new Slot(new DateTime(2011, 9, 3), "CT", 2, true, 1, true, 1));
+            scheduler.Schedule.Add(new Slot(new DateTime(2011, 9, 10), "CT", 2, true, 2, true, 1));
+            scheduler.Schedule.Add(new Slot(new DateTime(2011, 9, 17), "CT", 2, true, 3, true, 1));
+            scheduler.Schedule[0].doctor = doctor;
+
+            scheduler.MaxShiftsPerRotation = 0;
+            Assert.IsFalse(scheduler.DoctorHasExceededMaxDaysThisRotation(scheduler.Schedule[1], doctor));
+        }
+
+        [TestMethod]
+        public void FalseWhenDoesNotExceedMaxShiftsPerRotation() {
+            var doctor = new Doctor();
+            doctor.Name = "House";
+            var scheduler = new Scheduler();
+            scheduler.Schedule = new List<Slot>();
+            scheduler.Schedule.Add(new Slot(new DateTime(2011, 9, 3), "CT", 2, true, 1, true, 1));
+            scheduler.Schedule.Add(new Slot(new DateTime(2011, 9, 10), "CT", 2, true, 2, true, 1));
+            scheduler.Schedule.Add(new Slot(new DateTime(2011, 9, 17), "CT", 2, true, 3, true, 1));
+            scheduler.Schedule[0].doctor = doctor;
+
+            scheduler.MaxShiftsPerRotation = 4;
+            Assert.IsFalse(scheduler.DoctorHasExceededMaxDaysThisRotation(scheduler.Schedule[1], doctor));
+        }
+
+        [TestMethod]
+        public void FalseWhenSingleShiftDoesNotExceedMaxShiftsPerRotation() {
+            var doctor = new Doctor();
+            doctor.Name = "House";
+            var scheduler = new Scheduler();
+            scheduler.Schedule = new List<Slot>();
+            scheduler.Schedule.Add(new Slot(new DateTime(2011, 9, 3), "CT", 2, true, 1, true, 1));
+            scheduler.Schedule.Add(new Slot(new DateTime(2011, 9, 9), "CT", 1, true, 2, false, 1));
+            scheduler.Schedule.Add(new Slot(new DateTime(2011, 9, 17), "CT", 2, true, 3, true, 1));
+            scheduler.Schedule[0].doctor = doctor;
+
+            scheduler.MaxShiftsPerRotation = 3;
+            Assert.IsFalse(scheduler.DoctorHasExceededMaxDaysThisRotation(scheduler.Schedule[1], doctor));
+        }
     }
 }
