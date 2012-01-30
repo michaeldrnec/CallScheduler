@@ -206,6 +206,10 @@ namespace CallScheduler
             {
                 return false;
             }
+            if (DoctorHasExceededHisPersonalMaxShifts(slot, doctor))
+            {
+                return false;
+            }
             return true;
         }
 
@@ -286,6 +290,11 @@ namespace CallScheduler
             if (MaxShiftsPerLifetime == 0)
                 return false;
             return doctor.TotalShiftCount + (slot.is24 ? 2 : 1) > MaxShiftsPerLifetime;
+        }
+
+        public bool DoctorHasExceededHisPersonalMaxShifts(Slot slot, Doctor doctor)
+        {
+            return doctor.TotalShiftCount + (slot.is24 ? 2 : 1) > doctor.MaxShifts;
         }
 
         private bool DoctorHasExceededMaxSameShiftsPerRotation(Slot slot, Doctor doctor)

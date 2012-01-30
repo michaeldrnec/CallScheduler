@@ -11,6 +11,7 @@ namespace CallScheduler {
         public int OriginalRank;
         public int TotalShiftCount = 0;
         public int DoubleShiftsWorked = 0;
+        public int MaxShifts = int.MaxValue;
 
         public object Clone()
         {
@@ -39,40 +40,59 @@ namespace CallScheduler {
             var doctors = new List<Doctor>();
             using (var reader = new StreamReader(filename)) {
                 string line;
-                while ((line = reader.ReadLine()) != null) {
-                    var doctorInfo = line.Split(',');
-                    var doctor = new Doctor { Name = doctorInfo[0] };
-                    for (var i = 1; i < doctorInfo.Length; i++) {
-                        var dateOfVacation = doctorInfo[i];
-                        var dateSpan = doctorInfo[i].Trim().Split('-');
-                        try
-                        {
-                            if (dateSpan.Length == 2)
-                            {
-                                foreach (
-                                    var day in
-                                        Scheduler.EachDay(DateTime.Parse(dateSpan[0]), DateTime.Parse(dateSpan[1])))
-                                {
-                                    doctor.Vacation.Add(day);
-                                }
-                            }
-                            else
-                            {
-                                if (dateOfVacation.Trim() != String.Empty)
-                                {
-                                    doctor.Vacation.Add(DateTime.Parse(dateOfVacation));
-                                }
-                            }
-                        } catch (Exception)
-                        {
-                            throw(new Exception(string.Format("Error reading doctor's file on line: {0}", line)));
-                        }
-                    }
+                while ((line = reader.ReadLine()) != null)
+                {
+                    Doctor doctor = ParseDoctor(line);
                     doctors.Add(doctor);
                 }
                 reader.Close();
             }
             return doctors;
+        }
+
+        public static Doctor ParseDoctor(string line)
+        {
+            var dateStart = 2;
+            var doctorInfo = line.Split(',');
+            var doctor = new Doctor { Name = doctorInfo[0] };
+            if (!doctorInfo[1].Contains("/"))
+            {
+                int maxShifts;
+                if (int.TryParse(doctorInfo[1], out maxShifts))
+                {
+                    doctor.MaxShifts = maxShifts;
+                }
+            } else
+            {
+                dateStart = 1;
+            }
+            for (var i = dateStart; i < doctorInfo.Length; i++) {
+                var dateOfVacation = doctorInfo[i];
+                var dateSpan = doctorInfo[i].Trim().Split('-');
+                try
+                {
+                    if (dateSpan.Length == 2)
+                    {
+                        foreach (
+                            var day in
+                                Scheduler.EachDay(DateTime.Parse(dateSpan[0]), DateTime.Parse(dateSpan[1])))
+                        {
+                            doctor.Vacation.Add(day);
+                        }
+                    }
+                    else
+                    {
+                        if (dateOfVacation.Trim() != String.Empty)
+                        {
+                            doctor.Vacation.Add(DateTime.Parse(dateOfVacation));
+                        }
+                    }
+                } catch (Exception)
+                {
+                    throw(new Exception(string.Format("Error reading doctor's file on line: {0}", line)));
+                }
+            }
+            return doctor;
         }
     }
 }

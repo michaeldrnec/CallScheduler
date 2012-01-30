@@ -135,5 +135,28 @@ namespace CallSchedulerTest {
             scheduler.MaxShiftsPerRotation = 3;
             Assert.IsFalse(scheduler.DoctorHasExceededMaxDaysThisRotation(scheduler.Schedule[1], doctor));
         }
+
+        [TestMethod]
+        public void TrueWhenDoctorExceededMaxShiftsForDoctor()
+        {
+            var doctor = new Doctor();
+            doctor.Name = "House";
+            doctor.MaxShifts = 3;
+            doctor.TotalShiftCount = 2;
+
+            var scheduler = new Scheduler();
+            Assert.IsTrue(scheduler.DoctorHasExceededHisPersonalMaxShifts(new Slot(new DateTime(2011, 9, 3), "CT", 2, true, 1, true, 1), doctor));
+        }
+
+        [TestMethod]
+        public void FalseWhenDoctorDoesnotExceedMaxShiftsForDoctor() {
+            var doctor = new Doctor();
+            doctor.Name = "House";
+            doctor.MaxShifts = 5;
+            doctor.TotalShiftCount = 2;
+
+            var scheduler = new Scheduler();
+            Assert.IsFalse(scheduler.DoctorHasExceededHisPersonalMaxShifts(new Slot(new DateTime(2011, 9, 3), "CT", 2, true, 1, true, 1), doctor));
+        }
     }
 }
